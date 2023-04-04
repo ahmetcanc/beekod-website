@@ -1,0 +1,83 @@
+﻿
+@model List<BeekodSiteProject.Models.Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">İletişim</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="/Contact/İcerikEkle" type="button" class="btn btn-success">İletişim Ekle</a>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>İsim Soyisim</th>
+                                <th>Mail Adresi</th>
+                                <th>Konu</th>
+                                <th>Mesaj</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.NameSurname</td>
+                                    <td>@item.EMail</td>
+                                    <td>@item.Subject</td>
+                                    <td>@item.Message</td>
+                                    
+                                    <td>
+                                        @*<a style="margin-right: 4px;" href="/Admin/OdaTipleri/YeniOdaTipi" class="btn btn-tbl-edit btn-xs btn-secondary" title="Ekle"><i class="fa-solid fa-plus"></i></a>*@
+                                        <a style="margin-right: 4px;" href="/Contact/İcerikGuncelle/@item.Id" class="btn btn-tbl-edit btn-xs btn-secondary" title="Düzenle"><i class="fa-solid fa-pencil"></i></a>
+                                        <a style="margin-right: 4px;" href="/Contact/İcerikSil/@item.Id" class="btn btn-tbl-edit btn-xs btn-danger" title="Sil"><i class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.content-wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+</section>
+
+
+

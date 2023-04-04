@@ -1,0 +1,77 @@
+﻿@model List<BeekodSiteProject.Models.Service>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Hizmetler</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="/Admin/OdaTipleri/YeniOdaTipi" type="button" class="btn btn-success">Hizmetler Ekle</a>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Başlık</th>
+                                <th>Başlık</th>
+                                <th>Ücret</th>
+                                <th>İşlem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.ServicesId</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Content</td>
+                                    <td>@item.ImageUrl</td>
+                                    <td>
+                                        @*<a style="margin-right: 4px;" href="/Admin/OdaTipleri/YeniOdaTipi" class="btn btn-tbl-edit btn-xs btn-secondary" title="Ekle"><i class="fa-solid fa-plus"></i></a>*@
+                                        <a style="margin-right: 4px;" href="/Admin/OdaTipleri/YeniOdaTipi/" class="btn btn-tbl-edit btn-xs btn-secondary" title="Düzenle"><i class="fa-solid fa-pencil"></i></a>
+                                        <a style="margin-right: 4px;" href="/Admin/OdaTipleri/TipSil/" class="btn btn-tbl-edit btn-xs btn-danger" title="Sil"><i class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.content-wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+</section>

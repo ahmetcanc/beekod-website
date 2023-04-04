@@ -1,0 +1,695 @@
+﻿@model List<BeekodSiteProject.Models.Home>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
+
+
+<div class="tp-banner-container" style="height:500px;">
+    <div class="tp-banner">
+        <ul style="display:none;">
+            <li data-transition="fade" data-slotamount="7" data-masterspeed="700">
+                <img src="~/Content/sitetemplate/assets/images/fon1.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="center"
+                     data-y="95"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 4">
+                    Beekod ile satışlarınızı arttırın
+                </div>
+                <div class="tp-caption largeborder skewfromrightshort"
+                     data-x="center"
+                     data-y="200"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1100"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                </div>
+                <div class="tp-caption largetext sft"
+                     data-x="center"
+                     data-y="250"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1400"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    E-ticaret alt yapıları içerisinde bulunan modüller sayesinde e-ticaret süreçlerini daha kolay bir şekilde yönetebilmektedir.<br />
+
+                </div>
+                <div class="tp-caption largebutton lfb"
+                     data-x="center"
+                     data-y="360"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <a href="/Pricing/Index">Şimdi Satın Al</a>
+                </div>
+            </li>
+            <li data-transition="random" data-slotamount="7" data-masterspeed="700">
+                <img src="~/Content/sitetemplate/assets/images/fon2.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="30"
+                     data-y="80"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 4">
+                    Responsive & Mobil Uyum
+                </div>
+                <div class="tp-caption largetext sft"
+                     data-x="30"
+                     data-y="170"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1100"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9;text-align:left;">
+                    İşletmenize uygun, istekleriniz doğrultusunda responsive ve mobil uyumlu <br /> web siteleri ile web sayfanızı benzersiz bir şekilde tasarlıyoruz.
+                </div>
+                <div class="tp-caption largebutton lft"
+                     data-x="30"
+                     data-y="270"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="2400"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                </div>
+                <div class="tp-caption lfb"
+                     data-x="730"
+                     data-y="40"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1650"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <img src="~/Content/sitetemplate/assets/images/imacphoto.png" alt="">
+                </div>
+                <div class="tp-caption lfb"
+                     data-x="760"
+                     data-y="405"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="1850"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <img src="~/Content/sitetemplate/assets/images/keyboard.png" alt="">
+                </div>
+                <div class="tp-caption lfb"
+                     data-x="1020"
+                     data-y="405"
+                     data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                     data-speed="500"
+                     data-start="2000"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <img src="~/Content/sitetemplate/assets/images/mouse.png" alt="">
+                </div>
+            </li>
+            <li data-transition="random" data-slotamount="7" data-masterspeed="700">
+                <img src="~/Content/sitetemplate/assets/images/fon1.jpg" alt="" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                <div class="tp-caption lfb"
+                     data-x="30"
+                     data-y="40"
+                     data-speed="500"
+                     data-start="800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <img src="~/Content/sitetemplate/assets/images/man.png" alt="">
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="550"
+                     data-y="75"
+                     data-speed="500"
+                     data-start="1400"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    Mutlu müşteriler
+                </div>
+                <div class="tp-caption largetext sft"
+                     data-x="550"
+                     data-y="160"
+                     data-speed="500"
+                     data-start="1600"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9;text-align:left;">
+                    Tüm entegrasyonlarınızı kolaylıkla hayata geçirebilir, <br /> modullerimiz sayesinde kazancınızı arttırabilirsiniz.
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="540"
+                     data-y="250"
+                     data-speed="500"
+                     data-start="1800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <i class="icon-user"></i>
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="625"
+                     data-y="245"
+                     data-speed="500"
+                     data-start="2000"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="682"
+                     data-y="250"
+                     data-speed="500"
+                     data-start="2200"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <img src="~/Content/sitetemplate/assets/images/logo.png" alt="">
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="765"
+                     data-y="250"
+                     data-speed="500"
+                     data-start="2400"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    =
+                </div>
+                <div class="tp-caption largeblackbg sfb"
+                     data-x="815"
+                     data-y="250"
+                     data-speed="500"
+                     data-start="2600"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                    <i class="icon-heart"></i>
+                </div>
+                <div class="tp-caption largebutton lft"
+                     data-x="550"
+                     data-y="350"
+                     data-speed="500"
+                     data-start="2800"
+                     data-easing="Back.easeOut"
+                     data-endspeed="500"
+                     data-endeasing="Power4.easeIn"
+                     data-captionhidden="on"
+                     style="z-index: 9">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+<script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="text/javascript">
+    var revapi;
+    jQuery(document).ready(function () {
+        revapi = jQuery('.tp-banner').revolution({
+            delay: 9000,
+            startwidth: 1170,
+            startheight: 500,
+            hideThumbs: 10,
+            forceFullWidth: "off",
+        });
+    }); //ready
+</script>
+<div class="container marg75">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="promo-block">
+                <div class="promo-text">Hizmetlerimiz</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-lightbulb"></div>
+                <div class="service-name">Minimal Tasarım</div>
+                <div class="service-text">Benzersiz ve güzel tasarımlar ile projelerimizi ortaya çıkarıyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-heart"></div>
+                <div class="service-name">Müşterilerimizi Seviyoruz</div>
+                <div class="service-text">Anında müşteri geri dönüşleriyle müşterilerimizin ortaya çıkan sorunlarını anında çözüyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-params"></div>
+                <div class="service-name">Güçlü Ve Esnek</div>
+                <div class="service-text">Müşterilerimizin dilediği gibi projeleri tasarlayarak onlara uygun yapıda işler gerçekleştiriyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-globe"></div>
+                <div class="service-name">Premium Destek</div>
+                <div class="service-text">Premium destek ile müşterilermizin ortaya çıkan tüm sorunlarına yanıt veriyoruz.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-color marg75">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="promo-block">
+                    <div class="promo-text">Demomuzu Inceleyin</div>
+                    <div class="center-line"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container marg50">
+        <div class="grid hover-3">
+            <div class="cbp-l-grid-projects" id="grid-container">
+                <ul>
+                    @foreach (var item in Model)
+                    {
+                        <li class="cbp-item">
+                            <div class="portfolio-main">
+                                <figure>
+                                    <img src="@item.ImageUrl" />
+                                    <figcaption>
+                                        <h3>@item.Title<br />@item.Content</h3>
+                                        <a target="_blank" href="@item.Url" class="portfolio-search"><i class="icon-attach"></i></a>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="prl-1">
+    <div class="prlx">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 marg50"><div class="quote"><i class="fa fa-quote-right"></i></div></div>
+                <div class="col-lg-12">
+                    <div class="testimonials">
+                        <div id="carousel-testimonials" class="carousel slide">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-testimonials" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-testimonials" data-slide-to="1" class=""></li>
+                                <li data-target="#carousel-testimonials" data-slide-to="2" class=""></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <p class="testimonial-quote"> Bütün isteklerimizi yerine getirmeleri harika ! Çok kısa sürede çeşitli alternatifler ile bize tercih imkanı sundular.</p>
+                                    <p class="testimonial-author">John Doe</p>
+                                </div>
+                                <div class="item">
+                                    <p class="testimonial-quote">Sektörde hiç karşılaşmadığım benzersiz tasarımları ile benim tercihim Beekod.</p>
+                                    <p class="testimonial-author">Mila Markovna</p>
+                                </div>
+                                <div class="item">
+                                    <p class="testimonial-quote">Yeni teknolojiler ile kendini sürekli geliştiren, isteklerimi kısa sürede uygulayabilen genç kadrosu ile sorunlara anında geri dönüşler alabilmek harika !</p>
+                                    <p class="testimonial-author">Gustav Holtz</p>
+                                </div>
+
+                            </div>
+                            <a class="left carousel-control" href="#carousel-testimonials" data-slide="prev">&lsaquo;</a>
+                            <a class="right carousel-control" href="#carousel-testimonials" data-slide="next">&rsaquo;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container marg75">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">Kısaca Biz</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="marg50">
+                <p class="about-text"><span class="first-letter">BEEKOD</span>mükemmel tasarım ve uygulamalarla sizi geleceğe taşıyan bir firmadır. Amacımız, en iyi ortamda, en iyi çalışmayı gerçekleştirmek Sorunlarını veya amaçlarını ve daha da önemlisi, başarıyı ölçme kriterlerini anlayabilmek için müşterilerimize kulak veririz. Küçük ve büyük ölçekli tüm müşterilerimize, ayrım yapmaksızın, aynı derecede değer veriyoruz.</p>
+                <ul class="list-check">
+                    <li><i class="icon-ok"></i> Benzersiz Tasarimlar</li>
+                    <li><i class="icon-ok"></i> Siki Musteri Iliskileri</li>
+                    <li><i class="icon-ok"></i> Tum Pazaryerlerine Uygun</li>
+                    <li><i class="icon-ok"></i> Aninda Destek</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">Tanitim</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="row marg50">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-ms-12">
+                    <div class="blog-main">
+                        <div class="blog-images">
+                            <div class="view view-fifth">
+                                <iframe style="border-radius:30px;" width="600" height="300" src="https://www.youtube.com/embed/U4NVrzaxZYU" title="YouTube video player"
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container marg100">
+    <div class="row">
+        <div style="padding-top:10px;" class="col-lg-12">
+            <div class="promo-block">
+                <div class="promo-text">Referanslarımız</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+        <section id="clients" class="clients clients">
+            <div style="margin-top:2em;" class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <a target="_blank" href="https://www.webeaglesstore.com/"><img src="~/Content/sitetemplate/assets/images/webeagles.png" /></a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="https://www.anemonatcilik.com/">
+                            <img src="~/Content/sitetemplate/assets/images/anemon.png" />
+                        </a>
+                    </div>
+
+                    <div style="margin-top:5px;" class="col-lg-2 col-md-5 col-6">
+                        <a target="_blank" href="https://www.ac-lastik.com/">
+                            <img style="padding-top:2em;" src="~/Content/sitetemplate/assets/images/aksan.png" />
+                        </a>
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6">
+
+                        <a target="_blank" href="https://izmityesilovaasm.com/">
+                            <img src="~/Content/sitetemplate/assets/images/tc-saglik-bakanligi-logo-126E4977C0-seeklogo.com.png" />
+                        </a>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="https://www.ottomanbornova.com/">
+                            <img src="~/Content/sitetemplate/assets/images/img_400_244_ottoman-nargile-atolyesi.png" />
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="https://www.ozerkirtasiye.com.tr/">
+                            <img src="~/Content/sitetemplate/assets/images/ozer.jpeg" />
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="https://phytomax.net/">
+                            <img src="~/Content/sitetemplate/assets/images/logo-2.png" />
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-6">
+                        <a target="_blank" href="https://www.patikamp.com/">
+                            <img src="~/Content/sitetemplate/assets/images/patikamp.png" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<section class="hero-section" id="hero">
+    <div class="wave">
+        <svg width="1920px" height="265px" viewBox="0 0 1920 265" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        </svg>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12">
+                <div class="row justify-content-start">
+                    <div>
+                        <div class="row">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div style="border-radius: 40px; box-shadow: rgba(14, 30, 37, 0.12) 20px 20px 20px 20px, rgba(14, 30, 37, 0.32) 20px 20px 20px 20px; border: 3px solid white; " class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img height="530" class="d-block w-100" src="~/Content/SoftLand/assets/img/slider1.jpeg" alt="First slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img height="530" class="d-block w-100" src="~/Content/SoftLand/assets/img/slider2.jpeg" alt="Second slide">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img height="530" class="d-block w-100" src="~/Content/SoftLand/assets/img/slider3.jpeg" alt="Third slide">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+                                </a>
+                            </div>
+                        </div>
+                    </div>-->
+@*<div class="col-lg-8 text-start hero-text">
+        <h1 data-aos="fade-right">BEEKOD ile işinizi büyütün!</h1>
+        <p class="mb-5" data-aos="fade-right" data-aos-delay="100">
+            Web siteleri yapan yetenekli tasarımcılardan ve yazılımcılardan oluşan bir ekibiz.
+        </p>
+        <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="/ViAbout/Index/" class="btn btn-outline-white">Başlayın</a></p>
+    </div>*@
+<!--</div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<br />
+<section id="clients" class="clients clients">
+    <div class="container">
+        <h1 style="padding-bottom: 28px;">Referanslar</h1>
+        <div class="row">
+            <div class="col-lg-2 col-md-4 col-6">
+                <a href="https://www.webeaglesstore.com/"><img src="~/Content/SoftLand/assets/img/ref2.jpeg" /></a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="https://www.anemonatcilik.com/"><img src="~/Content/SoftLand/assets/img/ref5.jpeg" /></a>
+            </div>
+
+            <div style="margin-top:5px;" class="col-lg-2 col-md-5 col-6">
+                <a href="https://www.ac-lastik.com/"><img src="~/Content/SoftLand/assets/img/ref8.jpeg" /></a>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <a href="https://izmityesilovaasm.com/">
+                    <img src="~/Content/SoftLand/assets/img/ref1.jpeg" />
+                </a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="https://www.ottomanbornova.com/">
+                    <img src="~/Content/SoftLand/assets/img/ref7.jpeg" />
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="https://www.ozerkirtasiye.com.tr/"><img src="~/Content/SoftLand/assets/img/ref3.jpeg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="https://phytomax.net/"><img src="~/Content/SoftLand/assets/img/ref6.jpeg" /></a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-6">
+                <a href="https://www.patikamp.com/"><img src="~/Content/SoftLand/assets/img/ref4.jpeg" /></a>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+
+<div class="container" style="border:3px gray; border-style:hidden hidden solid hidden;"></div>
+<section class="section">
+    <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-md-5" data-aos="fade-up">
+                <h2 class="section-heading">E-Ticarette daha fazla kazanmak icin </h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="">
+                <div class="feature-1 text-center">
+                    <div class="wrap-icon icon-1">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h3 class="mb-3">Ön Muhasebe</h3>
+                    <p>Trendyol, Hepsiburada, N11 ve Çiçek Sepetine hızlı ve toplu ürün gönderin. Siparişleriniz anında sisteme düşsün. </p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-1 text-center">
+                    <div class="wrap-icon icon-1">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+                    <h3 class="mb-3">E-Fatura</h3>
+                    <p>Gelen siparişlerinizin faturasını otomatik olarak kesin, anında musteriye iletilsin. </p>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-1 text-center">
+                    <div class="wrap-icon icon-1">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+                    <h3 class="mb-3">Stok Takibi</h3>
+                    <p>Ürunlerinizi toplu bir şekilde yükleyelim. Tüm pazaryerlerindeki stoklarınız otomatik olarak güncellensin.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-1 text-center">
+                <div class="wrap-icon icon-1">
+                    <i class="bi bi-code"></i>
+                </div>
+                <h3 class="mb-3">E-Ticaret Sitesi</h3>
+                <p>E-Ticaret sitemizle entegre bir çözüm. E-ticaret sitenize otomatik ürün aktarımı gerçekleşir ve anlık siparişleriniz sisteme düşer.</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-4">
+            <div class="step">
+                <h3>Muhasebe Programi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, optio.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="step">
+                <h3>E-Ticaret Sitesi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, optio.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="step">
+                <h3>Pazaryerlerine uygun</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, optio.</p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <p align="center"><a href="https://www.miraysale.com/" class="btn btn-primary">Demoyu Deneyin</a></p>
+    </div>
+</section>
+
+<div class="container" style="border:3px gray; border-style:hidden hidden solid hidden;"></div>-->

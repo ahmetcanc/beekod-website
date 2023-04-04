@@ -1,0 +1,87 @@
+﻿@model List<BeekodSiteProject.Models.Pricing>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Fiyatlandırma</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<section class="content">
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+
+        <div class="container-fluid">
+            <!-- Small boxes (Stat box) -->
+
+            <div class="card">
+                <div class="card-header">
+                    <a href="/Pricing/İcerikEkle" type="button" class="btn btn-success">Fiyatlandırma Ekle</a>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Başlık</th>
+                                <th>Ücret</th>
+                                <th>Özellik 1</th>
+                                <th>Özellik 2</th>
+                                <th>Özellik 3</th>
+                                <th>Özellik 4</th>
+                                <th>Özellik 5</th>
+                                <th>Özellik 6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.Id</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.Price</td>
+                                    <td>@item.Ozellik1</td>
+                                    <td>@item.Ozellik2</td>
+                                    <td>@item.Ozellik3</td>
+                                    <td>@item.Ozellik4</td>
+                                    <td>@item.Ozellik5</td>
+                                    <td>@item.Ozellik6</td>
+                                    <td>
+                                        @*<a style="margin-right: 4px;" href="/Admin/OdaTipleri/YeniOdaTipi" class="btn btn-tbl-edit btn-xs btn-secondary" title="Ekle"><i class="fa-solid fa-plus"></i></a>*@
+                                        <a style="margin-right: 4px;" href="/Pricing/İcerikGuncelle/@item.Id" class="btn btn-tbl-edit btn-xs btn-secondary" title="Düzenle"><i class="fa-solid fa-pencil"></i></a>
+                                        <a style="margin-right: 4px;" href="/Pricing/İcerikSil/@item.Id" class="btn btn-tbl-edit btn-xs btn-danger" title="Sil"><i class="fa-solid fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.content-wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-dark">
+                <!-- Control sidebar content goes here -->
+            </aside>
+            <!-- /.control-sidebar -->
+        </div>
+
+        <!-- Control Sidebar -->
+        <aside class="control-sidebar control-sidebar-dark">
+            <!-- Control sidebar content goes here -->
+        </aside>
+        <!-- /.control-sidebar -->
+    </div>
+</section>
+
+

@@ -1,0 +1,181 @@
+﻿@model List<BeekodSiteProject.Models.Service>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
+
+
+<div class="page-in">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 pull-left"><div class="page-in-name">Hizmetlerimiz: <span>Biz ne yapıyoruz?</span></div></div>
+            <div class="col-lg-6 pull-right"><div class="page-in-bread"><span>Buradasınız:</span> <a href="@Url.Action("index","viservice")">Hizmetlerimiz</a></div></div>
+        </div>
+    </div>
+</div>
+<div class="container marg75">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="promo-block">
+                <div class="promo-text">Bizi neden tercih etmelisiniz?</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 marg50">
+            <div class="introduction">
+                <img src="~/Content/sitetemplate/assets/images/services.jpg">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 marg50">
+            <div class="">
+                <p class="about-text"><span class="first-letter">T</span> ecrübeli ve genç kadromuzla müşterilimizin zamandan ve paradan tasarruf ederek diledikleri dijital çözümleri sunabilmekteyiz.</p>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <ul class="list-check">
+                            <li><i class="icon-ok"></i>Benzersiz ve minimal tasarımlar</li>
+                            <li><i class="icon-ok"></i>Ekonomik çözümler</li>
+                            <li><i class="icon-ok"></i>Güçlü ve dinamik ekip</li>
+                            <li><i class="icon-ok"></i>7/24 Destek</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <ul class="list-check">
+                            <li><i class="icon-ok"></i>Etkili iletişim </li>
+                            <li><i class="icon-ok"></i>Zamandan tasarruf</li>
+                            <li><i class="icon-ok"></i>E-Ticarette bir adım önde</li>
+                            <li><i class="icon-ok"></i>SEO ya uygun</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12"><div class="button-center"><a href="@Url.Action("index","vipricing")" class="btn-simple serv-marg" style="margin-top:20px;"><i class="icon-money"></i> Paketlerimizi İnceleyin</a></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container marg100">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="promo-block">
+                <div class="promo-text">Hizmetlerimiz</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-lightbulb"></div>
+                <div class="service-name">Minimal Tasarım</div>
+                <div class="service-text">Benzersiz ve güzel tasarımlar ile projelerimizi ortaya çıkarıyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-heart"></div>
+                <div class="service-name">Müşterilerimizi Seviyoruz</div>
+                <div class="service-text">Anında müşteri geri dönüşleriyle müşterilerimizin ortaya çıkan sorunlarını anında çözüyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-params"></div>
+                <div class="service-name">Güçlü Ve Esnek</div>
+                <div class="service-text">Müşterilerimizin dilediği gibi projeleri tasarlayarak onlara uygun yapıda işler gerçekleştiriyoruz.</div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-ms-12">
+            <div class="hi-icon-effect marg50">
+                <div class="hi-icon icon-globe"></div>
+                <div class="service-name">Premium Destek</div>
+                <div class="service-text">Premium destek ile müşterilermizin ortaya çıkan tüm sorunlarına yanıt veriyoruz.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container marg100">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">Diğer Hizmetlerimiz</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="row marg50">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+
+                        <div class="other-serv">
+                            <div class="serv-icon"><i class="@item.Icon"></i></div>
+                            <div class="serv-name">@item.ServTitle</div>
+                            <div class="serv-desc">@item.ServDes</div>
+                        </div>
+
+                    </div>
+                }
+                </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">Müşteri Görüşleri</div>
+                <div class="center-line"></div>
+            </div>
+
+            <div class="marg50">
+                <div class="testimonialrotator skin_default" id="tr1">
+                    <div class="testimonial-tobe">
+                        <div class="testtext" style="border:none">Bütün isteklerimizi yerine getirmeleri harika ! Çok kısa sürede çeşitli alternatifler ile bize tercih imkanı sundular.</div>
+                        <div class="testauthor-img"><img src="~/Content/sitetemplate/assets/images/mike.jpg"></div>
+                        <div class="testauthor"></div>
+                        <div class="testauthor-desc">Müşteri</div>
+                        <div class="testauthor-rating">
+                            <ul>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="testimonial-tobe">
+                        <div class="testtext" style="border:none">Yeni teknolojiler ile kendini sürekli geliştiren, isteklerimi kısa sürede uygulayabilen genç kadrosu ile sorunlara anında geri dönüşler alabilmek harika !</div>
+                        <div class="testauthor-img"><img src="~/Content/sitetemplate/assets/images/mila.png"></div>
+                        <div class="testauthor">Pelin Çalışkan</div>
+                        <div class="testauthor-desc">Disney Inc.</div>
+                        <div class="testauthor-rating">
+                            <ul>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="testimonial-tobe">
+                        <div class="testtext" style="border:none">Sektörde hiç karşılaşmadığım benzersiz tasarımları ile benim tercihim Beekod.</div>
+                        <div class="testauthor-img"><img src="~/Content/sitetemplate/assets/images/mike.png"></div>
+                        <div class="testauthor">Mustafa Yılmaz</div>
+                        <div class="testauthor-desc">Müşteri</div>
+                        <div class="testauthor-rating">
+                            <ul>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                                <li><i class="icon-star"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

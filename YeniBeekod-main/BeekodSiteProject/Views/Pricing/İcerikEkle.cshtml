@@ -1,0 +1,76 @@
+﻿@model BeekodSiteProject.Models.Pricing
+@{
+    ViewBag.Title = "İcerikEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Fiyatlandırma İçerik Ekle</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
+<!-- Main content -->
+<section class="content">
+
+    @*<div class="card-header">
+            <h3 class="card-title">Anasayfa İçerik Ekle</h3>
+        </div>*@
+    <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="card">
+            <div class="card-body">
+                <form asp-action="İcerikEkle" method="post">
+                    <div class="form-horizonal">
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Title)
+                            @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Price)
+                            @Html.TextBoxFor(x => x.Price, new { @class = "form-control ", @type = "number" })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik1)
+                            @Html.TextBoxFor(x => x.Ozellik1, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik2)
+                            @Html.TextBoxFor(x => x.Ozellik2, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik3)
+                            @Html.TextBoxFor(x => x.Ozellik3, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik4)
+                            @Html.TextBoxFor(x => x.Ozellik4, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik5)
+                            @Html.TextBoxFor(x => x.Ozellik5, new { @class = "form-control " })
+                        </div>
+                        <div class="form-group col-md-12">
+                            @Html.LabelFor(x => x.Ozellik6)
+                            @Html.TextBoxFor(x => x.Ozellik6, new { @class = "form-control " })
+                        </div>
+                    </div>
+                    <a style="margin-right: 4px;" href="/Pricing/Index" class="btn btn-warning">Listeye Geri Dön</a>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+

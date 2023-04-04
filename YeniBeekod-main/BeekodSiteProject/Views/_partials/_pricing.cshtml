@@ -1,0 +1,44 @@
+﻿@model List<BeekodSiteProject.Models.InfoBar>
+
+
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="row">#</th>
+                <th scope="row">First</th>
+                <th scope="row">Last</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+                <th scope="row">Handle</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach (var item in Model)
+          {
+            <tr>
+                <td>@item.TFeature1</td>
+                <td>@item.TFeature2</td>
+                <td>@item.TFeature3</td>
+                <td>@item.TFeature4</td>
+                <td>@item.TFeature5</td>
+                <td>@item.TFeature6</td>
+                <td>@item.TFeature7</td>
+                <td>@item.TFeature8</td>
+                <td>@item.TFeature9</td>
+                <td>@item.TFeature10</td>
+            </tr>
+          }
+
+
+        </tbody>
+    </table>
+
+</div>
+

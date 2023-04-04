@@ -1,0 +1,136 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ViewLayout.cshtml";
+}
+
+@if (TempData["Message"] != null)
+{
+    <script src="~/Content/AdminPanel/plugins/sweetalert2/sweetalert2.all.js"></script>
+    <script src="~/Content/AdminPanel/plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script src="~/Content/AdminPanel/docs/assets/plugins/jquery/jquery.js"></script>
+    <script>
+
+            Swal.fire({
+                icon: 'success',
+                title: 'Başarılı',
+                confirmButtonText: 'Tamam',
+                text: '@Html.Raw(TempData["Message"])'
+            });
+    </script>
+}
+
+
+
+<div class="container marg75">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="promo-block">
+                <div class="promo-text">Konumumuz</div>
+                <div class="center-line"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="row">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d377.3106686074314!2d31.153942294477456!3d40.83926669065918!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d75b01970e2bf%3A0x5e17568f160d408c!2zQmVla29kIFlhesSxbMSxbQ!5e0!3m2!1str!2str!4v1679475610717!5m2!1str!2str" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="container marg100">
+    <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">İletişim Formu</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="marg50">
+                <div class="row">
+                    <form id="contactForm" class="form-style" method="post" action="@Url.Action("Index","ViContact")">
+                        <div class="col-lg-4">
+                            <div class="text_cont form-group floating-label-form-group controls">
+                                <input name="Adsoyad" id="Adsoyad" type="text" placeholder="Adınız Soyadınız..." required="" data-validation-required-message="Lütfen Adınızı Soyadınızı Giriniz" class="form-control"><span class="help-block text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="text_cont form-group floating-label-form-group controls">
+                                <input name="Emails" id="Emails" placeholder="Mail" required="" data-validation-required-message="Please enter email" class="form-control"><span class="help-block text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="text_cont form-group floating-label-form-group controls">
+                                <input name="Konu" id="Konu" type="tel" placeholder="Telefon Numaranız..." required="" data-validation-required-message="Please enter phone number" class="form-control"><span class="help-block text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="text_cont form-group floating-label-form-group controls">
+                                <textarea name="Mesaj" id="Mesaj" cols="40" rows="10" placeholder="Mesajınız" required="" data-validation-required-message="Please enter a message." aria-invalid="false" class="form-control"></textarea><span class="help-block text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12"><div id="success"></div></div>
+                        <div class="col-lg-12"><p><button type="submit" class="btn btn-default">Gönder</button></p></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="promo-block">
+                <div class="promo-text">Bilgi</div>
+                <div class="center-line"></div>
+            </div>
+            <div class="marg50">
+                <ul class="contact-footer">
+                    <li><i class="icon-location"></i> Adres: Camikebir Mah. Mehmet Gösterişli Sokak Özkan Çakar İş Merkezi No:10</li>
+                    <li><i class="icon-mobile"></i> Numara: 8 (043) 567 - 89 - 30</li>
+                    <li><i class="icon-mail"></i> E-mail: info@beekod.com</li>
+                    <li><i class="icon-key"></i> Pazartesi-Cumartesi: 09:00-19:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+            <h3>İletişim</h3>
+            <a class="btn btn-primary btn-lg btn-floating"
+               style="border-radius: 90px; background-color: #DD2A7B; "
+               href="https://www.instagram.com/beekodyazilim/"
+               role="button">
+                <i class="fa fa-instagram"></i>
+            </a>
+            <a class="btn btn-primary btn-lg btn-floating"
+               style=" border-radius:90px; background-color: #0e76a8;"
+               href="https://www.linkedin.com/company/beekod/"
+               role="button">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a class="btn btn-primary btn-lg btn-floating"
+               style=" border-radius: 90px; background-color: #808080;"
+               href="mailto:info@beekod.com"
+               role="button">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
